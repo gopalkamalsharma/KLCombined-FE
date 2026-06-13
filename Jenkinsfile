@@ -1,17 +1,17 @@
 Pipeline{
-    stages{
-        stage('Install'){
-            steps{
+    Stages{
+        Stage('Install'){
+            Steps{
                 sh 'npm install'
             }
         }
-        stage('Build'){
-            steps{
+        Stage('Build'){
+            Steps{
                 sh 'npm run build'
             }
         }
-        stage('Deploy'){
-            steps{
+        Stage('Deploy'){
+            Steps{
                 echo 'Deploying...'
                 sh '''
                 cp -r dist/* /var/www/html/
